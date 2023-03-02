@@ -3,9 +3,11 @@ import NotesItem from "./NotesItem";
 
 function NotesList({ notes, onDelete }) {
     return (
-      <div className='notes-list'>
-        {notes.map((note) => (
-          <NotesItem key={note.id} id={note.id} onDelete={onDelete} {...note} />
+      notes.length === 0 
+      ? <p className='notes-list__empty-message'>Tidak Ada Catatan</p>
+      : <div className='notes-list'>
+           {notes.map((note) => (
+           <NotesItem key={note.id} id={note.id} onDelete={onDelete} {...note} />
         ))}
       </div>
     );
