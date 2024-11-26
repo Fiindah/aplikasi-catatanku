@@ -39,7 +39,6 @@ input::placeholder, textarea::placeholder {
 
 .note-app__header h1 {
   margin: 8px 0;
-  flex: 1;
   color: white;
 }
 
